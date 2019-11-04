@@ -55,15 +55,15 @@ assert(russiaCapital == "Moscow", "Was expecting Moscow, but got \(String(descri
     
 // b. Add a new key value pair "Jamaica" and its capital "Kingston"
 
-// Your code here
-
-//assert(citiesDict["Jamaica"] == "Kingston", "Was expecting Kingston, but got \(String(describing: citiesDict["Jamaica"]))")
+citiesDict["Jamaica"] = "Kingston"
+print(citiesDict)
+assert(citiesDict["Jamaica"] == "Kingston", "Was expecting Kingston, but got \(String(describing: citiesDict["Jamaica"]))")
 
 // c. Add a new key value pair "Indonesia" and its capital "Jakarta"
 
-// Your code here
+citiesDict["Indonesia"] = "Jakarta"
 
-//assert(citiesDict["Indonesia"] == "Jakarta", "Was expecting Jakarta, but got \(String(describing: citiesDict["Indonesia"]))")
+assert(citiesDict["Indonesia"] == "Jakarta", "Was expecting Jakarta, but got \(String(describing: citiesDict["Indonesia"]))")
 
 // Question 3
 
