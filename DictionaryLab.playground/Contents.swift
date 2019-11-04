@@ -161,14 +161,34 @@ assert(highestScoringName == "Garry Mckenzie", "Was expecting Garry Mckenzie, bu
 
 var cubeDict: [Int: Int] = [:]
 
-// Your code here
+cubeDict = [ 1 : 1,
+             2 : 8,
+             3 : 27,
+             4 : 64,
+             5 : 125,
+             6 : 216,
+             7 : 343,
+             8 : 512,
+             9 : 729,
+             10 : 1000,
+             11 : 1331,
+             12 : 1728,
+             13 : 2197,
+             14 : 2744,
+             15 : 3375,
+             16 : 4096,
+             17 : 4913,
+             18 : 5832,
+             19 : 6859,
+             20 : 8000
+                ]
 
-//assert(cubeDict.count == 20, "Was expecting 20, but got \(cubeDict.count)")
-//assert(cubeDict[1] == 1, "Was expecting 1, but got \(String(describing: cubeDict[1]))")
-//assert(cubeDict[2] == 8, "Was expecting 8, but got \(String(describing: cubeDict[2]))")
-//assert(cubeDict[3] == 27, "Was expecting 27, but got \(String(describing: cubeDict[3]))")
-//assert(cubeDict[14] == 2744, "Was expecting 2744, but got \(String(describing: cubeDict[14]))")
-//assert(cubeDict[20] == 8000, "Was expecting 8000, but got \(String(describing: cubeDict[20]))")
+assert(cubeDict.count == 20, "Was expecting 20, but got \(cubeDict.count)")
+assert(cubeDict[1] == 1, "Was expecting 1, but got \(String(describing: cubeDict[1]))")
+assert(cubeDict[2] == 8, "Was expecting 8, but got \(String(describing: cubeDict[2]))")
+assert(cubeDict[3] == 27, "Was expecting 27, but got \(String(describing: cubeDict[3]))")
+assert(cubeDict[14] == 2744, "Was expecting 2744, but got \(String(describing: cubeDict[14]))")
+assert(cubeDict[20] == 8000, "Was expecting 8000, but got \(String(describing: cubeDict[20]))")
 
 
 // Question Six
