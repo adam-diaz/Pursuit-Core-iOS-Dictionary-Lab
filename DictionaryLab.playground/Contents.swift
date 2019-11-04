@@ -2,7 +2,7 @@ import UIKit
 
 // Uncomment the "assert" lines for each problem when you have a solution, and run the playground to test.  When you have uncommented out the assert lines, no error messages or print statements means that your code is working correctly.
 
-// Question 1
+// Question 1 - complete
 
 var applesDict: [String: Int] = ["Adam": 3,
                                  "Beth": 5,
@@ -42,7 +42,7 @@ for (_, value) in applesDict {
     assert(value == 0, "Was expecting 0, but got \(value)")
 }
 
-// Question Two
+// Question Two - complete
 
 var citiesDict: [String: String] = ["Afghanistan": "Kabul",
                                     "Russia": "Moscow",
@@ -65,7 +65,7 @@ citiesDict["Indonesia"] = "Jakarta"
 
 assert(citiesDict["Indonesia"] == "Jakarta", "Was expecting Jakarta, but got \(String(describing: citiesDict["Indonesia"]))")
 
-// Question 3
+// Question 3 - complete
 
 // a. Create a dictionary that represents the table below listing an authors name and their comprehensibility score.
 
@@ -102,7 +102,7 @@ authorScores["Erik Larson"] = 9.2
 assert(authorScores["Erik Larson"] == 9.2, "Was expecting 9.2, but got \(String(describing: authorScores["Erik Larson"]))")
 
 
-// Question Four
+// Question Four - worked on with Alex
 
 // You are given an array of dictionaries. Each dictionary in the array describes the score of a person. Find the person with the best score and print his full name.
 
@@ -138,7 +138,21 @@ var highestScoringName = ""
 
 // Your code here
 
-//assert(highestScoringName == "Garry Mckenzie", "Was expecting Garry Mckenzie, but got \(highestScoringName)")
+var highestScore = 0
+for currentPersonDictionary in peopleWithScores {
+  print("currently looking at \(currentPersonDictionary["firstName"] ?? "")")
+  let scoreAsString = currentPersonDictionary["score"] ?? "0"
+  let scoreAsInt = Int(scoreAsString) ?? 0
+  if scoreAsInt > highestScore { // e.g 13 > 0
+    highestScore = scoreAsInt // e.g 13
+    let firstName = currentPersonDictionary["firstName"] ?? "Jane"
+    let lastName = currentPersonDictionary["lastName"] ?? "Doe"
+    highestScoringName = firstName + " " + lastName
+  }
+  print("\n")
+}
+print("\(highestScoringName) has the highest score of \(highestScore)")
+assert(highestScoringName == "Garry Mckenzie", "Was expecting Garry Mckenzie, but got \(highestScoringName)")
 
 // Question Five
 
